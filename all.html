@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Escapes | Book Unforgettable Travel Experiences</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #2a6df5;
+            --primary-dark: #1a56d4;
+            --secondary: #ff7e5f;
+            --light: #f8f9fa;
+            --dark: #333333;
+            --gray: #6c757d;
+            --success: #28a745;
+            --border-radius: 10px;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #fff;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav li {
+            margin-left: 30px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding-top: 150px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            opacity: 0.9;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #ff6b47;
+        }
+        
+        .btn-large {
+            padding: 18px 45px;
+            font-size: 1.2rem;
+        }
+        
+        /* Value Proposition */
+        .value-prop {
+            background-color: var(--light);
+        }
+        
+        .value-prop-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .value-prop h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .value-prop p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+        
+        .usp-badge {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        /* Problem & Solution */
+        .problem-solution {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .problem, .solution {
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .problem {
+            background-color: #ffeaea;
+        }
+        
+        .solution {
+            background-color: #e8f4ff;
+        }
+        
+        .problem h3, .solution h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .problem ul, .solution ul {
+            list-style-position: inside;
+            margin-bottom: 20px;
+        }
+        
+        .problem li, .solution li {
+            margin-bottom: 10px;
+        }
+        
+        /* Features & Benefits */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--light);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin-right: 15px;
+            overflow: hidden;
+        }
+        
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Trust Signals */
+        .trust-signals {
+            text-align: center;
+        }
+        
+        .badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .badge i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        /* Lead Capture */
+        .lead-capture {
+            background-color: var(--light);
+        }
+        
+        .lead-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 50px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background-color: var(--light);
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column a {
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .features-grid, .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .problem-solution {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid, .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .lead-form-container {
+                padding: 30px 20px;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-globe-americas"></i>
+                Wanderlust Escapes
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#booking" class="btn">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Discover Your Next Adventure With Ease</h1>
+            <p>Book personalized travel experiences with exclusive deals, 24/7 support, and flexible cancellation policies. Your dream vacation is just a few clicks away.</p>
+            <a href="#booking" class="btn btn-large btn-secondary">Get Deals & Book Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Clear Value Proposition -->
+    <section class="value-prop">
+        <div class="container value-prop-content">
+            <span class="usp-badge">Our Unique Promise</span>
+            <h2>One Platform For All Your Travel Needs</h2>
+            <p>Wanderlust Escapes combines the best deals from hundreds of providers with personalized travel planning. We solve the hassle of comparing multiple sites while offering exclusive packages you won't find elsewhere.</p>
+            <div class="stats">
+                <p><strong>500,000+</strong> satisfied travelers | <strong>4.9/5</strong> average rating | <strong>24/7</strong> customer support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution Section -->
+    <section id="problem-solution">
+        <div class="container">
+            <div class="section-title">
+                <h2>Travel Planning Made Simple</h2>
+                <p>We understand the challenges of travel planning and have created the perfect solution</p>
+            </div>
+            
+            <div class="problem-solution">
+                <div class="problem">
+                    <h3>The Travel Planning Headache</h3>
+                    <ul>
+                        <li>Spending hours comparing prices across multiple websites</li>
+                        <li>Uncertainty about cancellation policies and hidden fees</li>
+                        <li>Difficulty finding authentic local experiences</li>
+                        <li>Overwhelming options with no personalized recommendations</li>
+                        <li>Poor customer support when issues arise</li>
+                    </ul>
+                </div>
+                
+                <div class="solution">
+                    <h3>Our Hassle-Free Solution</h3>
+                    <ul>
+                        <li>One platform comparing 500+ providers instantly</li>
+                        <li>Transparent pricing with no hidden fees</li>
+                        <li>Curated local experiences verified by our travel experts</li>
+                        <li>AI-powered recommendations based on your preferences</li>
+                        <li>24/7 customer support via chat, phone, or email</li>
+                    </ul>
+                    <a href="#booking" class="btn">Experience The Difference</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features & Benefits -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Features That Enhance Your Journey</h2>
+                <p>Discover how Wanderlust Escapes makes every aspect of travel better</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3>Best Price Guarantee</h3>
+                    <p>Find the lowest prices or we'll match the difference plus give you 10% off your next booking.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Flexible Cancellation</h3>
+                    <p>Change your plans with ease. Most bookings offer free cancellation up to 24 hours before.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Travel Support</h3>
+                    <p>Our travel experts are available round-the-clock to assist you before, during, and after your trip.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Personalized Itineraries</h3>
+                    <p>Get custom travel plans based on your interests, budget, and travel style.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Exclusive Experiences</h3>
+                    <p>Access unique tours, activities, and accommodations not available on other platforms.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>All-In-One Travel App</h3>
+                    <p>Manage all your bookings, documents, and itineraries in our easy-to-use mobile app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Travelers Love Wanderlust Escapes</h2>
+                <p>Join thousands of satisfied customers who have transformed their travel experiences</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Booking through Wanderlust Escapes saved me over $800 on my trip to Bali. Their price tracking alerted me when flights dropped, and their local experience recommendations were spot on!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Bali, Indonesia • March 2023</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "When our flight got canceled last minute, Wanderlust's 24/7 support rebooked us on the next available flight and arranged a hotel—all within 30 minutes. Lifesavers!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Michael Chen">
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Paris, France • December 2022</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "The personalized itinerary feature helped us discover hidden gems in Japan we would have never found on our own. Our best family vacation yet!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Elena Rodriguez">
+                        </div>
+                        <div class="author-info">
+                            <h4>Elena Rodriguez</h4>
+                            <p>Tokyo, Japan • November 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="client-logos" style="text-align: center; margin-top: 50px;">
+                <p style="margin-bottom: 20px; color: var(--gray);">Featured in:</p>
+                <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; font-size: 1.2rem; font-weight: 600; color: var(--dark);">
+                    <span>Travel Weekly</span>
+                    <span>Forbes Travel</span>
+                    <span>Lonely Planet</span>
+                    <span>National Geographic</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Signals / Security Badges -->
+    <section class="trust-signals">
+        <div class="container">
+            <div class="section-title">
+                <h2>Book With Confidence</h2>
+                <p>Your security and satisfaction are our top priorities</p>
+            </div>
+            
+            <div class="badges">
+                <div class="badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>SSL Secure Booking</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-lock"></i>
+                    <span>Privacy Protected</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-medal"></i>
+                    <span>Best Price Guarantee</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Verified Reviews</span>
+                </div>
+            </div>
+            
+            <div style="max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f0f8ff; border-radius: var(--border-radius);">
+                <h3 style="margin-bottom: 15px; color: var(--primary);">Our Guarantee to You</h3>
+                <p>We offer a 30-day money-back satisfaction guarantee on all our travel planning services. If you're not completely satisfied with your booking experience, we'll refund your service fee—no questions asked.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Demonstration -->
+    <section style="background-color: var(--light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>How It Works</h2>
+                <p>Your journey to the perfect vacation in three simple steps</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center;">
+                <div>
+                    <div style="font-size: 3rem; color: var(--primary); margin-bottom: 20px; font-weight: bold;">1</div>
+                    <h3 style="margin-bottom: 15px;">Tell Us Your Dream</h3>
+                    <p>Share your destination, dates, budget, and travel style with our smart search.</p>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; color: var(--primary); margin-bottom: 20px; font-weight: bold;">2</div>
+                    <h3 style="margin-bottom: 15px;">Get Personalized Options</h3>
+                    <p>Receive curated flight, hotel, and experience recommendations tailored to you.</p>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; color: var(--primary); margin-bottom: 20px; font-weight: bold;">3</div>
+                    <h3 style="margin-bottom: 15px;">Book & Travel Stress-Free</h3>
+                    <p>Secure your trip with our best price guarantee and 24/7 support throughout your journey.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <div style="max-width: 800px; margin: 0 auto; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow);">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; background-color: #333;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; color: white; background: linear-gradient(45deg, var(--primary), var(--secondary));">
+                            <div style="text-align: center;">
+                                <i class="fas fa-play-circle" style="font-size: 4rem; margin-bottom: 15px;"></i>
+                                <h3>See Our Platform in Action</h3>
+                                <p>Watch a 2-minute demo of how Wanderlust Escapes works</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Capture Form -->
+    <section id="booking" class="lead-capture">
+        <div class="container">
+            <div class="section-title">
+                <h2>Start Your Adventure Today</h2>
+                <p>Get exclusive deals and personalized recommendations by signing up</p>
+            </div>
+            
+            <div class="lead-form-container">
+                <h3 style="text-align: center; margin-bottom: 30px; color: var(--dark);">Find Your Perfect Trip</h3>
+                
+                <form id="travel-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="destination">Destination</label>
+                            <input type="text" id="destination" placeholder="Where do you want to go?" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="travelers">Travelers</label>
+                            <select id="travelers">
+                                <option value="1">1 Traveler</option>
+                                <option value="2">2 Travelers</option>
+                                <option value="3">3 Travelers</option>
+                                <option value="4">4 Travelers</option>
+                                <option value="5+">5+ Travelers</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="check-in">Check-in Date</label>
+                            <input type="date" id="check-in" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="check-out">Check-out Date</label>
+                            <input type="date" id="check-out" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 30px;">
+                        <button type="submit" class="btn btn-secondary" style="width: 100%; padding: 18px;">
+                            <i class="fas fa-search"></i> Search & Get Exclusive Deals
+                        </button>
+                    </div>
+                    
+                    <p style="text-align: center; margin-top: 20px; color: var(--gray); font-size: 0.9rem;">
+                        By submitting this form, you agree to our <a href="#" style="color: var(--primary);">Privacy Policy</a> and consent to receive travel deals via email.
+                    </p>
+                </form>
+                
+                <div style="background-color: #f0f8ff; padding: 20px; border-radius: var(--border-radius); margin-top: 30px; text-align: center;">
+                    <h4 style="color: var(--primary); margin-bottom: 10px;"><i class="fas fa-gift"></i> Special Offer for New Users</h4>
+                    <p>Sign up today and get <strong>10% off</strong> your first booking plus a free travel insurance upgrade!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Get answers to common questions about booking with Wanderlust Escapes</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How does the best price guarantee work?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If you find a lower publicly available price for the same travel itinerary within 24 hours of booking with us, we'll match the price and give you an additional 10% credit toward your next booking. Simply contact our customer support with the booking details and the lower price you found.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is your cancellation policy?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most bookings on Wanderlust Escapes offer free cancellation up to 24 hours before check-in or departure. However, cancellation policies vary by provider and rate type. The specific cancellation policy for each option is clearly displayed before you book. We always recommend reviewing this information carefully before confirming your reservation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do I need travel insurance?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While not mandatory, we strongly recommend travel insurance for all bookings. Unexpected events like flight cancellations, medical emergencies, or natural disasters can disrupt your plans. We offer comprehensive travel insurance options during the checkout process, or you can purchase your own. Our basic insurance is free for all bookings over $500.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do personalized itineraries work?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>After you book with us, you'll receive a questionnaire about your interests, travel style, and preferences. Our travel experts and AI system will then create a custom itinerary with recommendations for activities, dining, and local experiences tailored specifically to you. This service is complimentary for all bookings over $1000.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What payment methods do you accept?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards (Visa, MasterCard, American Express, Discover), PayPal, Apple Pay, Google Pay, and bank transfers for certain larger bookings. All payments are processed through our secure, encrypted payment system to ensure your financial information is protected.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <h3 style="margin-bottom: 20px;">Still have questions?</h3>
+                <p style="margin-bottom: 30px;">Our travel experts are available 24/7 to assist you</p>
+                <a href="#contact" class="btn btn-large"><i class="fas fa-headset"></i> Contact Support</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Your Dream Vacation Awaits</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; opacity: 0.9;">
+                Join over 500,000 travelers who have discovered stress-free booking with Wanderlust Escapes
+            </p>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="#booking" class="btn btn-secondary btn-large"><i class="fas fa-bolt"></i> Get Deals Now</a>
+                <a href="#features" class="btn btn-large" style="background-color: rgba(255,255,255,0.2); border: 2px solid white;"><i class="fas fa-play-circle"></i> Watch Demo</a>
+            </div>
+            
+            <div style="margin-top: 50px; display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; font-size: 0.9rem;">
+                <span><i class="fas fa-check-circle"></i> No booking fees</span>
+                <span><i class="fas fa-check-circle"></i> Best price guarantee</span>
+                <span><i class="fas fa-check-circle"></i> 24/7 customer support</span>
+                <span><i class="fas fa-check-circle"></i> Flexible cancellation</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-column">
+                <h3>Wanderlust Escapes</h3>
+                <p style="color: #bbb; margin-bottom: 20px;">Making travel planning simple, affordable, and enjoyable since 2015.</p>
+                <div style="display: flex; gap: 15px; font-size: 1.2rem;">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Destinations</h3>
+                <ul>
+                    <li><a href="#">Europe</a></li>
+                    <li><a href="#">Asia</a></li>
+                    <li><a href="#">North America</a></li>
+                    <li><a href="#">South America</a></li>
+                    <li><a href="#">Africa</a></li>
+                    <li><a href="#">Australia & Oceania</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">COVID-19 Updates</a></li>
+                    <li><a href="#">Cancellation Options</a></li>
+                    <li><a href="#">Safety Information</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container copyright">
+            <p>&copy; 2023 Wanderlust Escapes. All rights reserved. | <a href="#" style="color: #bbb;">Privacy Policy</a> | <a href="#" style="color: #bbb;">Terms of Service</a></p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">Wanderlust Escapes is a registered trademark. All other trademarks are property of their respective owners.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+        });
+        
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Toggle active class on answer
+                answer.classList.toggle('active');
+                
+                // Rotate icon
+                if (answer.classList.contains('active')) {
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+                
+                // Close other open FAQ items
+                document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                    if (otherAnswer !== answer && otherAnswer.classList.contains('active')) {
+                        otherAnswer.classList.remove('active');
+                        otherAnswer.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+        
+        // Form submission
+        document.getElementById('travel-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const destination = document.getElementById('destination').value;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            // In a real implementation, you would send this data to a server
+            // For this demo, we'll just show an alert
+            alert(`Thank you ${name}! We're searching for the best deals to ${destination}. Check your email at ${email} for personalized recommendations.`);
+            
+            // Reset form
+            this.reset();
+            
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Set min date for check-in to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('check-in').min = today;
+        
+        // Update check-out min date when check-in changes
+        document.getElementById('check-in').addEventListener('change', function() {
+            document.getElementById('check-out').min = this.value;
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = '10px 0';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.padding = '15px 0';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
